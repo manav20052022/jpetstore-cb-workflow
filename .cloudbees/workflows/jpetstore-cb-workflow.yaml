@@ -12,7 +12,7 @@ jobs:
         name: Checkout
         with:
           provider: github
-          repository: jpetstore-6
+          repository: manav20052022/jpetstore-6
       - uses: docker://maven:3-eclipse-temurin-17
         name: Maven build
         shell: sh
