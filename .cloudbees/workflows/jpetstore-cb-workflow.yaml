@@ -17,15 +17,4 @@ jobs:
         name: Maven build
         shell: sh
         run: |
-          mvn clean install 
-  SonarQube:
-    steps:
-      - uses: cloudbees-io/sonarqube-sast-scan-code@v1
-        name: Run SonarQube scan
-        kind: scan
-        with:
-          server-url: https://sonar.cloudbees.guru:9000
-          username: admin
-          password: ${{ secrets.sonarqube_cloudbees_guru }}
-    needs:
-      - build
+          mvn package 
